@@ -20,15 +20,18 @@ The message model is defined as follows:
 
 Headers are encoded as follows:
 
-[Header Length (1 byte)][Header Name (variable length)][Header Value (variable length)]
-The header length field indicates the total length of the header name and value. The maximum length of a header is 1023 bytes.
+``` [Header Length (1 byte)][Header Name (variable length)][Header Value (variable length)] ```
+
+-The header length field indicates the total length of the header name and value. The maximum length of a header is 1023 bytes.
 
 ## Message Format
 
 The entire message structure is organized as follows:
 
-[Number of Headers (1 byte)][Header 1][Header 2]...[Header N][Payload]
-The number of headers field indicates the total count of headers in the message. Headers are followed by the binary payload. The maximum number of headers allowed is 63, and the payload size is limited to 256 KiB.
+``` [Number of Headers (1 byte)][Header 1][Header 2]...[Header N][Payload] ```
+
+- The number of headers field indicates the total count of headers in the message. 
+- Headers are followed by the binary payload. The maximum number of headers allowed is 63, and the payload size is limited to 256 KiB.
 
 ## Contributing
 
