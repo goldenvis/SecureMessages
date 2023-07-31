@@ -16,23 +16,6 @@ The message model is defined as follows:
 * A message can have a maximum of 63 headers.
 * The message payload is limited to 256 KiB.
   
-## Header Encoding
-
-Headers are encoded as follows:
-
-``` [Header Length (1 byte)][Header Name (variable length)][Header Value (variable length)] ```
-
--The header length field indicates the total length of the header name and value. The maximum length of a header is 1023 bytes.
-
-## Message Format
-
-The entire message structure is organized as follows:
-
-``` [Number of Headers (1 byte)][Header 1][Header 2]...[Header N][Payload] ```
-
-- The number of headers field indicates the total count of headers in the message. 
-- Headers are followed by the binary payload. The maximum number of headers allowed is 63, and the payload size is limited to 256 KiB.
-
 ## Contributing
 
 Welcome contributors to your project. Mention guidelines for contributing, such as the process for submitting pull requests or reporting issues. Also, include information on how contributors will be recognized (e.g., adding their names to a CONTRIBUTORS file).
